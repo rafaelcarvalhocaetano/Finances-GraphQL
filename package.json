@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rafaelcarvalhocaetano/Finances-GraphQL#readme",
   "dependencies": {
+    "graphql-yoga": "1.17.4",
     "nodemon": "^2.0.2",
     "prisma-client-lib": "1.28.3"
   }
