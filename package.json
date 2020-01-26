@@ -1,10 +1,10 @@
 {
-  "name": "Finances-GraphQL",
+  "name": "financesgraphql",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   "homepage": "https://github.com/rafaelcarvalhocaetano/Finances-GraphQL#readme",
   "dependencies": {
     "graphql-yoga": "1.17.4",
-    "nodemon": "^2.0.2",
     "prisma-client-lib": "1.28.3"
   }
 }
