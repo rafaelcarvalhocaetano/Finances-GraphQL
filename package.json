@@ -1,0 +1,24 @@
+{
+  "name": "Finances-GraphQL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelcarvalhocaetano/Finances-GraphQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelcarvalhocaetano/Finances-GraphQL/issues"
+  },
+  "homepage": "https://github.com/rafaelcarvalhocaetano/Finances-GraphQL#readme",
+  "dependencies": {
+    "nodemon": "^2.0.2",
+    "prisma-client-lib": "1.28.3"
+  }
+}

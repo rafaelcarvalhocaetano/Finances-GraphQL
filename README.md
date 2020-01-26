@@ -3,5 +3,5 @@
 
 # CRD - PRISMA
  - prisma deploy
- - prisma generate (``` install -> npm i prisma-client-lib ``` )
+ - prisma generate (``` npm i prisma-client-lib ``` )
 
