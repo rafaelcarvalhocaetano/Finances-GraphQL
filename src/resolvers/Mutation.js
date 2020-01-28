@@ -1,7 +1,39 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const { getUserId } = require('../util');
+
 const JWT_SECRET = process.env.JWT_SECRET;
+
+async function createCategory(_, { description, operation }, ctx, info) {
+  const userId = getUserId(ctx);
+  return ctx.db.mutation.createCategory({
+    data: {
+      description,
+      operation,
+      user: {
+        connect: {
+          id: userId
+        }
+      }
+    }
+  }, info);
+
+}
+
+async function createAccount(_, { description }, ctx, info) {
+  const userId = getUserId(ctx);
+  return ctx.db.mutation.createAccount({
+    data: {
+      description,
+      user: {
+        connect: {
+          id: userId
+        }
+      }
+    }
+  }, info);
+}
 
 async function login(_, { email, password }, ctx, info) {
   const user = await ctx.db.query.user({ where: { email }});
@@ -19,7 +51,6 @@ async function login(_, { email, password }, ctx, info) {
   }
 }
 
-
 async function signup(_, args, ctx, info) {
   const password = await bcrypt.hash(args.password, 10);
   const user = await ctx.db.mutation.createUser({ data: { ...args, password }});
@@ -34,6 +65,8 @@ async function signup(_, args, ctx, info) {
 }
 
 module.exports = {
+  createCategory,
+  createAccount,
   login,
   signup
 }
