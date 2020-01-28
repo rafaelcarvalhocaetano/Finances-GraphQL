@@ -23,3 +23,7 @@ docker image rm $(docker image ls -a -q)
 
 ### Para todos os volumes
 docker volume prune
+
+
+#### FOI
+ - http://i.imgur.com/fOke4rG.png
