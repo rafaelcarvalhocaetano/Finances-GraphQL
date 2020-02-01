@@ -28,6 +28,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `${process.env["PRISMA_ENDPOINT"]}`
+  endpoint: `${process.env['PRISMA_ENDPOINT']}/${process.env['PRISMA_SERVICE']}/${process.env['PRISMA_STAGE']}`
 });
 exports.prisma = new exports.Prisma();
